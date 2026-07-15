@@ -38,8 +38,9 @@ Developed a `StatManager` that stores different stat objects through a common in
 <p align="center">
   <br>
   <img src="Media/TowerDefenseTemplate_Stat_Architecture.png" width="480">
-  <br><br>
+  <br>
   The architecture of the <code>Stat</code>.
+  <br><br>
 </p>
 
 ### State machine
@@ -54,14 +55,15 @@ Implemented a `StateMachine` architecture that supports and scales with states. 
 
 <p align="center">
   <br>
-  <img src="Media/TowerDefenseTemplate_State_Architecture.png" width="480">
-  <br><br>
-  The architecture of the <code>StateMachine</code>.
-
+  <img src="Media/TowerDefenseTemplate_StateMachine_Architecture.png" width="960">
   <br>
-  <img src="Media/TowerDefenseTemplate_State_RuntimeFlow.png" width="480">
+  The architecture of the <code>StateMachine</code>.
   <br><br>
+  
+  <img src="Media/TowerDefenseTemplate_StateMachine_RuntimeFlow.png" width="960">
+  <br>
   The runtime flow of the <code>StateMachine</code>.
+  <br><br>
 </p>
 
 ## Technology
