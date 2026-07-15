@@ -37,7 +37,7 @@ Developed a `StatManager` that stores different stat objects through a common in
 
 <p align="center">
   <br>
-  <img src="Media/Tower_Defense_Template_Stat_Architecture.png" width="480">
+  <img src="Media/TowerDefenseTemplate_Stat_Architecture.png" width="480">
   <br><br>
   The architecture of the <code>Stat</code>.
 </p>
@@ -54,9 +54,14 @@ Implemented a `StateMachine` architecture that supports and scales with states. 
 
 <p align="center">
   <br>
-  <img src="Media/Tower_Defense_Template_State_Architecture.png" width="480">
+  <img src="Media/TowerDefenseTemplate_State_Architecture.png" width="480">
   <br><br>
-  The architecture of the <code>State</code>.
+  The architecture of the <code>StateMachine</code>.
+
+  <br>
+  <img src="Media/TowerDefenseTemplate_State_RuntimeFlow.png" width="480">
+  <br><br>
+  The runtime flow of the <code>StateMachine</code>.
 </p>
 
 ## Technology
@@ -64,7 +69,23 @@ Implemented a `StateMachine` architecture that supports and scales with states. 
 - **C#** – Primary programming language for gameplay mechanics and systems.
 - **Microsoft Visual Studio** – IDE used for scripting and debugging.
 
-## Reflection
+## Future Refinement
+Although this project successfully established the foundation of reusable gameplay architecture, several areas could be further improved to increase flexibility and scalability.
 
+### Data-Driven Stat and State Registration
+The current implementation requires each `Stat` and `State` to be manually configured in the Unity Inspector. A future improvement would be introducing a more flexible registration system where new stats and states can be added through **configurable lists or collections** without requiring additional code changes in the managers. This would allow designers to extend gameplay systems more efficiently and improve the scalability of the framework.
+
+### More Generic Entity Support for State Machine
+The current `StateMachine` architecture was designed around the turret entity. This should be further **decoupled from the specific entity** to allow it to be reused across different types of objects such players, enemies or interactive objects. This would make the framework more suitable as a general-purpose gameplay architecture.
+
+### More Flexible Transition Conditions
+The current state transition system, `TransitionSO` supports a single condition checking, but it could be expanded to support more complex transition logic. Potential improvements could include **supporting multiple conditions** within a single transition, and **allowing logical operations** such as AND / OR for transition evaluation. This would allow the state to handle more advanced behaviours without creating additional custom logic.
+
+### Parameterized State Behaviours
+Currently, `StateBehaviourSO` executes predefined behaviours through configurable ScriptableObjects. A potential improvement would be **adding configurable parameters to behaviours**, allowing the same behaviour implementation to be reused with different values. For example, different input key checking for different states. This would reduce the need to create separate behaviour assets for small variations.
+
+<br>
+
+The limitations discovered during this project provided valuable design insights, and some of them had been addressed in <a href="https://github.com/YongKang03/versus-multiplayer-shooter">Versus Multiplayer Shooter</a> project, where the systems was further refined with improved generic support, reusable state handling and better integration with more complex gameplay systems.
 
 ## Media
