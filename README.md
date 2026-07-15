@@ -2,7 +2,7 @@
 <p align="center">
   An exercise where the modularity, reusabulity and scalability of game systems were explored.
   <br><br>
-  <img src="Media/Tower_Defense_Template_Page.png" width="480">
+  <img src="Media/TowerDefenseTemplate_Page.png" width="480">
 </p>
 
 ## Overview
