@@ -94,7 +94,7 @@ The limitations discovered during this project provided valuable design insights
 
 ## Media
 <p align="center">
-  <img src="Media/Media/TowerDefenseTemplate_DemoGif.gif" width="960">
+  <img src="Media/TowerDefenseTemplate_DemoGif.gif" width="960">
   <br>
   The gameplay demo of the Tower Defense Template.
   <br><br>
