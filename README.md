@@ -6,9 +6,9 @@
 </p>
 
 ## Overview
-The Tower Defense Template is solely developed during the Industrial Training course. This project serves as a foundation for experimenting with scalable game systems that can be reused across different genres rather than developing a polished tower defense game.
+The project template is solely developed during the Industrial Training course. This project serves as a foundation for experimenting with scalable game systems that can be reused across different genres rather than developing a polished tower defense game.
 
-In the prototype, the turret detects any targets within a radius, rotates the head and attack the target 
+In the prototype, the turret detects any targets within a radius, rotates the head and attack the target with a weapon that can be manually equipped by player. The stat system maanges the turret stats, while state system controls how the turret bahaves around the states.
 
 During development, this project became a valuable learning platform for understanding software architecture, system decoupling and code reusability. Many of the concepts and design patterns explored in this project were later refined and expanded in <a href="https://github.com/YongKang03/versus-multiplayer-shooter">Versus Multiplayer Shooter</a> project, where they were adapted to support more complex gameplay mechanics and multiplayer networking.
 
@@ -31,7 +31,7 @@ During development, this project became a valuable learning platform for underst
 ### Stat
 Create a reusable framework for managing gameplay attributes such as health, energy and cooldowns.
 
-Developed a `StatManager` that stores different stat objects through a common interface. Individual stats (`HealthStat`, `EnergyStat`, `GunCooldownStat`) inherit from an abstract `Stat` class and own an unique `StatID` enum. Configuration values are stored separately using `StatData` ScriptableObject. EEach of stats can be paired with a `StatID` and `StatData`, and `StatManager` exposes these stats to other classes with encapsulation.
+Developed a `StatManager` that stores different stat objects through a common interface. Individual stats (`HealthStat`, `EnergyStat`, `EnergyRegenStat`, `GunCooldownStat`) inherit from an abstract `Stat` class and own an unique `StatID` enum. Configuration values are stored separately using `StatData` ScriptableObject. EEach of stats can be paired with a `StatID` and `StatData`, and `StatManager` exposes these stats to other classes with encapsulation.
 
 - Supports adding new stat types without modifying existing systems.
 - Separates runtime values from configurable data.
@@ -96,10 +96,10 @@ The limitations discovered during this project provided valuable design insights
 <p align="center">
   <img src="Media/TowerDefenseTemplate_DemoGif.gif" width="960">
   <br>
-  The gameplay demo of the Tower Defense Template.
+  The gameplay demo of the <em>Tower Defense Template</em>.
   <br><br>
 
-  <img src="Media/Completed_shift_interface.png" width="480">
+  <img src="Media/TowerDefenseTemplate_StateSOExample.png" width="480">
   <br>
-  idk what to write yet
+  The example of <code>StateSO</code> in Unity Inspector.
 </p>
