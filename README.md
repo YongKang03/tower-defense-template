@@ -8,6 +8,8 @@
 ## Overview
 The Tower Defense Template is solely developed during the Industrial Training course. This project serves as a foundation for experimenting with scalable game systems that can be reused across different genres rather than developing a polished tower defense game.
 
+In the prototype, the turret detects any targets within a radius, rotates the head and attack the target 
+
 During development, this project became a valuable learning platform for understanding software architecture, system decoupling and code reusability. Many of the concepts and design patterns explored in this project were later refined and expanded in <a href="https://github.com/YongKang03/versus-multiplayer-shooter">Versus Multiplayer Shooter</a> project, where they were adapted to support more complex gameplay mechanics and multiplayer networking.
 
 ## Objective
@@ -74,20 +76,30 @@ Implemented a `StateMachine` architecture that supports and scales with states. 
 ## Future Refinement
 Although this project successfully established the foundation of reusable gameplay architecture, several areas could be further improved to increase flexibility and scalability.
 
-### Data-Driven Stat and State Registration
+### Data-driven stat and state registration
 The current implementation requires each `Stat` and `State` to be manually configured in the Unity Inspector. A future improvement would be introducing a more flexible registration system where new stats and states can be added through **configurable lists or collections** without requiring additional code changes in the managers. This would allow designers to extend gameplay systems more efficiently and improve the scalability of the framework.
 
-### More Generic Entity Support for State Machine
+### More generic entity support for state machine
 The current `StateMachine` architecture was designed around the turret entity. This should be further **decoupled from the specific entity** to allow it to be reused across different types of objects such players, enemies or interactive objects. This would make the framework more suitable as a general-purpose gameplay architecture.
 
-### More Flexible Transition Conditions
+### More flexible transition conditions
 The current state transition system, `TransitionSO` supports a single condition checking, but it could be expanded to support more complex transition logic. Potential improvements could include **supporting multiple conditions** within a single transition, and **allowing logical operations** such as AND / OR for transition evaluation. This would allow the state to handle more advanced behaviours without creating additional custom logic.
 
-### Parameterized State Behaviours
-Currently, `StateBehaviourSO` executes predefined behaviours through configurable ScriptableObjects. A potential improvement would be **adding configurable parameters to behaviours**, allowing the same behaviour implementation to be reused with different values. For example, different input key checking for different states. This would reduce the need to create separate behaviour assets for small variations.
+### Advanced parameterized state behaviours
+Although `StateBehaviourSO` could support configurable parameters to the behaviours through configurable ScriptableObjects, a further refinement could be applied to **move behaviour-specific parameters from the behaviour asset into the state configuration level**. This would allow the same behaviour implementation to be reused with different parameter values across multiple states without requiring duplicate ScriptableObject assets.
 
 <br>
 
 The limitations discovered during this project provided valuable design insights, and some of them had been addressed in <a href="https://github.com/YongKang03/versus-multiplayer-shooter">Versus Multiplayer Shooter</a> project, where the systems was further refined with improved generic support, reusable state handling and better integration with more complex gameplay systems.
 
 ## Media
+<p align="center">
+  <img src="Media/Media/TowerDefenseTemplate_DemoGif.gif" width="960">
+  <br>
+  The gameplay demo of the Tower Defense Template.
+  <br><br>
+
+  <img src="Media/Completed_shift_interface.png" width="480">
+  <br>
+  idk what to write yet
+</p>
