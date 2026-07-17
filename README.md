@@ -29,11 +29,12 @@ During development, this project became a valuable learning platform for underst
 
 ## Feature
 ### Stat
-Create a reusable framework for managing gameplay attributes such as health, energy and cooldowns.
+A reusable framework for managing gameplay attributes such as health, energy and cooldowns.
 
-Developed a `StatManager` that stores different stat objects through a common interface. Individual stats (`HealthStat`, `EnergyStat`, `EnergyRegenStat`, `GunCooldownStat`) inherit from an abstract `Stat` class and own an unique `StatID` enum. Configuration values are stored separately using `StatData` ScriptableObject. EEach of stats can be paired with a `StatID` and `StatData`, and `StatManager` exposes these stats to other classes with encapsulation.
+Developed a `StatManager` that stores different stat objects through a common interface. Individual stats (`HealthStat`, `EnergyStat`, `EnergyRegenStat`, `GunCooldownStat`) inherit from an abstract `Stat` class and own an unique `StatID` enum. Configuration values are stored separately using `StatData` ScriptableObject. Each of stats can be paired with a `StatID` and `StatData`, and `StatManager` exposes these stats to other classes with encapsulation.
 
-- Supports adding new stat types without modifying existing systems.
+Advantage:
+- Supports adding new stat types with minimal changes on the existing systems.
 - Separates runtime values from configurable data.
 - Allows UI and gameplay systems to access stats through a unified interface.
 
@@ -46,11 +47,12 @@ Developed a `StatManager` that stores different stat objects through a common in
 </p>
 
 ### State machine
-Provide a reusable framework for controlling gameplay behaviours without hardcoding state transitions for individual game objects.
+A reusable framework for controlling gameplay behaviours without hardcoding state transitions for individual game objects.
 
 Implemented a `StateMachine` architecture that supports and scales with states. Individual states are created as `StateSO` ScriptableObject containing configurable enter, update and exit behaviours. Every enter, update and exit behaviours are defined as `StateBehaviourSO` ScriptableObject where they run a specific behaviour from a defined state manager. State transitions are evaluated through reusable `TransitionSO` objects during the update behaviours, which contains a `ConditionSO` that runs a boolean method, the desired boolean output and the new `StateSO` to switch to. `EventSO` ScriptableObject is used to represent an event that can be invoked later for others in the `StateSO` behaviours using `InvokeEventSO` (`EventSO` and `InvokeEventSO` are SO-driven concept, they can be expanded to handle different type of events such as void or interface-based events). Each behaviour can be configured directly in the Unity Inspector after the required methods are defined, allowing state logic to be adjusted without modifying source code.
 
-- Generic implementation reusable across different entity types.
+Advantage:
+- Generic implementation reusable across an entity.
 - ScriptableObject-driven workflow reduces duplicated code.
 - Behaviours and transitions can be composed through the Unity Inspector.
 - Encourages separation between state logic and gameplay objects.
