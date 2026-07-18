@@ -34,9 +34,9 @@ A reusable framework for managing gameplay attributes such as health, energy and
 Developed a `StatManager` that stores different stat objects through a common interface. Individual stats (`HealthStat`, `EnergyStat`, `EnergyRegenStat`, `GunCooldownStat`) inherit from an abstract `Stat` class and own an unique `StatID` enum. Configuration values are stored separately using `StatData` ScriptableObject. Each of stats can be paired with a `StatID` and `StatData`, and `StatManager` exposes these stats to other classes with encapsulation.
 
 Advantage:
-- Supports adding new stat types with minimal changes on the existing systems.
-- Separates runtime values from configurable data.
-- Allows UI and gameplay systems to access stats through a unified interface.
+- Provides a centralized system for managing different stat types through a unified interface.
+- Separates runtime stat logic from configurable data using ScriptableObjects.
+- Allows gameplay and UI systems to access stats without through a unified interface.
 
 <p align="center">
   <br>
@@ -49,13 +49,12 @@ Advantage:
 ### State machine
 A reusable framework for controlling gameplay behaviours without hardcoding state transitions for individual game objects.
 
-Implemented a `StateMachine` architecture that supports and scales with states. Individual states are created as `StateSO` ScriptableObject containing configurable enter, update and exit behaviours. Every enter, update and exit behaviours are defined as `StateBehaviourSO` ScriptableObject where they run a specific behaviour from a defined state manager. State transitions are evaluated through reusable `TransitionSO` objects during the update behaviours, which contains a `ConditionSO` that runs a boolean method, the desired boolean output and the new `StateSO` to switch to. `EventSO` ScriptableObject is used to represent an event that can be invoked later for others in the `StateSO` behaviours using `InvokeEventSO` (`EventSO` and `InvokeEventSO` are SO-driven concept, they can be expanded to handle different type of events such as void or interface-based events). Each behaviour can be configured directly in the Unity Inspector after the required methods are defined, allowing state logic to be adjusted without modifying source code.
+Implemented a `StateMachine` architecture that supports and scales with `StateSO`, and `StateManager` (`StateManager` is manager concept, it's named `Turret`, `HeadStateManager` and `WeaponStateMaanger` in this case) that manages `StateSO` through `StateMachine`. Individual states are created as `StateSO` ScriptableObject containing configurable enter, update and exit behaviours. Every enter, update and exit behaviours are defined as `StateBehaviourSO` ScriptableObject where they run a specific behaviour from a defined state manager. State transitions are evaluated through reusable `TransitionSO` objects during the update behaviours, which contains a `ConditionSO` that runs a boolean method, the desired boolean output and the new `StateSO` to switch to. `EventSO` ScriptableObject is used to represent an event that can be invoked later for others in the `StateSO` behaviours using `InvokeEventSO` (`EventSO` and `InvokeEventSO` are SO-driven concept, they can be expanded to handle different type of events such as void or interface-based events). Each behaviour can be configured directly in the Unity Inspector after the required methods are defined, allowing state logic to be adjusted without modifying source code.
 
 Advantage:
-- Generic implementation reusable across an entity.
-- ScriptableObject-driven workflow reduces duplicated code.
-- Behaviours and transitions can be composed through the Unity Inspector.
-- Encourages separation between state logic and gameplay objects.
+- Provides a centralized system for managing different state types through a unified interface.
+- Provides a reusable state workflow that separates state logic from gameplay entities.
+- ScriptableObject-driven workflow reduces duplicated code and improves Inspector-based configuration.
 
 <p align="center">
   <br>
