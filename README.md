@@ -2,7 +2,7 @@
 <p align="center">
   An exercise where the modularity, reusability and scalability of game systems were explored.
   <br><br>
-  <img src="Media/TowerDefenseTemplate_Page.png" width="480">
+  <img src="Media/TowerDefenseTemplate_Page.png" width=480">
 </p>
 
 ## Overview
@@ -40,7 +40,7 @@ Advantage:
 
 <p align="center">
   <br>
-  <img src="Media/TowerDefenseTemplate_Stat_Architecture.png" width="560">
+  <img src="Media/TowerDefenseTemplate_Stat_Architecture.png" width="720">
   <br>
   The architecture of the <code>Stat</code>.
   <br><br>
@@ -58,12 +58,12 @@ Advantage:
 
 <p align="center">
   <br>
-  <img src="Media/TowerDefenseTemplate_StateMachine_Architecture.png" width="1080">
+  <img src="Media/TowerDefenseTemplate_StateMachine_Architecture.png" width="1920">
   <br>
   The architecture of the <code>StateMachine</code>.
   <br><br>
   
-  <img src="Media/TowerDefenseTemplate_StateMachine_RuntimeFlow.png" width="1080">
+  <img src="Media/TowerDefenseTemplate_StateMachine_RuntimeFlow.png" width="1920">
   <br>
   The runtime flow of the <code>StateMachine</code>.
   <br><br>
