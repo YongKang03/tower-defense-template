@@ -67,6 +67,10 @@ Advantage:
   <br>
   The runtime flow of the <code>StateMachine</code>.
   <br><br>
+
+  <img src="Media/TowerDefenseTemplate_StateSOExample.png" width="480">
+  <br>
+  The example of <code>StateSO</code> in Unity Inspector.
 </p>
 
 ## Technology
@@ -98,9 +102,4 @@ The limitations discovered during this project provided valuable design insights
   <img src="Media/TowerDefenseTemplate_DemoGif.gif" width="960">
   <br>
   The gameplay demo of the <em>Tower Defense Template</em>.
-  <br><br>
-
-  <img src="Media/TowerDefenseTemplate_StateSOExample.png" width="480">
-  <br>
-  The example of <code>StateSO</code> in Unity Inspector.
 </p>
