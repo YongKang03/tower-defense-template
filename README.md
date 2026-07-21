@@ -58,12 +58,12 @@ Advantage:
 
 <p align="center">
   <br>
-  <img src="Media/TowerDefenseTemplate_StateMachine_Architecture.png" width="1920">
+  <img src="Media/TowerDefenseTemplate_StateMachine_Architecture.png" width="960">
   <br>
   The architecture of the <code>StateMachine</code>.
   <br><br>
   
-  <img src="Media/TowerDefenseTemplate_StateMachine_RuntimeFlow.png" width="1920">
+  <img src="Media/TowerDefenseTemplate_StateMachine_RuntimeFlow.png" width="960">
   <br>
   The runtime flow of the <code>StateMachine</code>.
   <br><br>
@@ -99,7 +99,7 @@ The limitations discovered during this project provided valuable design insights
 
 ## Media
 <p align="center">
-  <img src="Media/TowerDefenseTemplate_DemoGif.gif" width="960">
+  <img src="Media/TowerDefenseTemplate_DemoGif.gif" width="720">
   <br>
   The gameplay demo of the <em>Tower Defense Template</em>.
 </p>
