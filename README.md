@@ -10,7 +10,7 @@ The project template is solely developed during the Industrial Training course. 
 
 In the prototype, the turret detects any targets within a radius, rotates the head and attack the target with a weapon that can be manually equipped by player. The stat system manages the turret stats, while state system controls how the turret behaves with the states.
 
-During development, this project became a valuable learning platform for understanding software architecture, system decoupling and code reusability. Many of the concepts and design patterns explored in this project were later refined and expanded in <a href="https://github.com/YongKang03/versus-multiplayer-shooter">Versus Multiplayer Shooter</a> project, where they were adapted to support more complex gameplay mechanics and multiplayer networking.
+A modular stat and state system are implemented during the development, making this project became a valuable learning platform for understanding software architecture, system decoupling and code reusability. Many of the concepts and design patterns explored in this project were later refined and expanded in <a href="https://github.com/YongKang03/versus-multiplayer-shooter">Versus Multiplayer Shooter</a> project, where they were adapted to support more complex gameplay mechanics.
 
 ## Objective
 - **Apply object-oriented programming concepts in game development**
